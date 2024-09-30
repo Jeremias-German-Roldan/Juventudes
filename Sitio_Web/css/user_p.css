@@ -1,0 +1,46 @@
+.container_up{
+    margin: 0 270px;
+    background-color: rgb(108, 157, 230);
+    border-radius: 20px;
+}
+
+#title_up{
+    text-align: center;
+    font-size: 35px;
+    padding: 10px;
+}
+
+.up{
+    margin: 5px;
+    padding: 10px;
+}
+
+.label{
+    margin: 10px;
+    padding: 8px;
+    font-size: 22px;
+}
+
+.content{
+    width: 500px;
+    height: 25px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-left: 50px;
+}
+
+.c_button{
+    
+    margin-left: 700px;
+    padding: 10px;
+}
+
+.button{
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}

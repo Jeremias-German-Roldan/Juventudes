@@ -1,0 +1,137 @@
+<!DOCTYPE html><!--tipo de documento como HTML5 -->
+<html lang="es"><!--idioma español-->
+<head>
+    <meta charset="UTF-8"><!-- conjunto de caracteres a utilizar-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Hace que la página sea adaptable a diferentes tamaños de pantalla (responsiva) -->
+    <link rel="stylesheet" href="css/cd.css"><!-- Enlaza el archivo de estilos CSS que define el diseño de la página -->
+    <link rel="icon" href="imagenes/logo.jpeg"><!-- Define el ícono que aparecerá en la pestaña del navegador -->
+    <title>Cultura y Deporte</title><!-- Define el título de la pestaña del navegador -->
+</head>
+<body><!-- Comienza el cuerpo del documento -->
+
+    <header><!-- Sección de encabezado de la página -->
+        <section id="caja-menu"><!-- Contenedor principal para el menú -->
+
+            <div class="contenedor-menu"><!-- Contenedor de menú -->
+                <div class="container_l"><!-- Contenedor adicional, probablemente para estilos -->
+                    <div id="logo"><!-- Contenedor para el logotipo -->
+                        <a href="Index.html"><img src="imagenes/logo.jpeg" alt="" class="img_j"></a><!-- Enlace al inicio con una imagen como logotipo -->
+                    </div>
+                </div>
+                <nav class="navbar_navbar-expand-lg"><!-- Barra de navegación -->
+                    <div class="container-fluid"><!-- Contenedor fluido para la barra de navegación -->
+                        <ul class="menú"><!-- Lista de elementos del menú -->
+                            <li class="lista"><!-- Elemento de lista del menú -->
+                                <a href="educacion.html" class="textT">EDUCACIÓN</a><!-- Enlace a la página de educación -->
+                            </li>
+
+                            <li class="lista">
+                                <a href="comunicaciones.html" class="textT">COMUNICACIÓN</a><!-- Enlace a la página de comunicaciones -->
+                            </li>
+
+                            <li class="lista">
+                                <a href="Cultura_Deporte.html" class="textT">CULTURA Y DEPORTES</a><!-- Enlace a la página de cultura y deportes -->
+                            </li>
+
+                            <li class="lista">
+                                <a href="Salud_Ambiente.html" class="textT">SALUD Y AMBIENTE</a><!-- Enlace a la página de salud y ambiente -->
+                            </li>
+
+                            <li class="lista">
+                                <a href="empleojoven.html" class="textT">EMPLEO JOVEN</a><!-- Enlace a la página de empleo joven -->
+                            </li>
+
+                            <li class="lista">
+                                <a href="casajoven.html" class="textT">CASA JOVEN</a><!-- Enlace a la página de casa joven -->
+                            </li>
+
+                            <li class="lista">
+                                <a href="administracion.html" class="textT">ADMINISTRACIÓN</a><!-- Enlace a la página de administración -->
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </header><!-- Fin del encabezado -->
+
+    <br>
+    <br>
+    <br>
+
+    <div class="buscador"><!-- Contenedor para el campo de búsqueda -->
+        <input type="text" id="buscar" placeholder="Buscar"><!-- Campo de entrada para buscar -->
+        <button onclick="buscar()" class="buscar-button">Buscar</button><!-- Botón para iniciar la búsqueda, llamando a la función buscar() -->
+    </div>
+
+    <h1 id="title">Cultura y Deporte</h1><!-- Título principal de la página -->
+
+    <li id="est"><!-- Elemento de lista para estadísticas -->
+        <a href="#" class="enlace_est">Estadisticas</a><!-- Enlace a las estadísticas (sin dirección específica) -->
+    </li>
+
+    <div class="contenedor_body"><!-- Contenedor principal del cuerpo de la página -->
+        <div class="cont_sub_AC"><!-- Contenedor para los formularios de carga y otros elementos -->
+
+            <form id="formularioSubida" enctype="multipart/form-data"><!-- Formulario para subir archivos -->
+                <button type="submit" class="sc">Subir Archivo</button><!-- Botón para enviar el formulario y subir el archivo -->
+                <input type="file" class="file"><!-- Campo para seleccionar un archivo -->
+            </form>
+    
+            <form id="carpetasubida"><!-- Formulario para subir carpetas (sin campo para seleccionar) -->
+                <button type="submit" class="sc">Subir Carpeta</button><!-- Botón para enviar el formulario de subida de carpetas -->
+            </form>
+        </div>
+    </div>
+
+    
+    <table class="tabla">
+        <tr class="filas">
+            <th class="ttitulos">#</th>
+            <th class="ttitulos">Nombre</th>
+            <th class="ttitulos">Archivo</th>
+            <th class="ttitulos">Descargar</th>
+        </tr>
+        <tr class="filas">
+            <td class="ttitulos"></td>
+            <td class="ttitulos"></td>
+            <td class="ttitulos"></td>
+            <i class="bi bi-download"><td class="ddownload"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+              </svg></td></i>
+        </tr>
+    </table>
+
+    <div class="container"><!-- Contenedor para el formulario de contacto -->
+        <h1>Informe</h1><!-- Título del formulario -->
+        <form id="contactForm" onsubmit="return validateForm()"><!-- Formulario de contacto con validación al enviar -->
+            <div class="form-group"><!-- Grupo de campos del formulario -->
+                <label for="name">Nombre:</label><!-- Etiqueta para el campo de nombre -->
+                <input type="text" id="name" name="name" required><!-- Campo de entrada para el nombre -->
+            </div>
+
+            <div class="form-group">
+                <label for="message">Resumen:</label><!-- Etiqueta para el campo de mensaje -->
+                <textarea id="message" name="message" rows="4" required></textarea><!-- Campo de texto para el resumen -->
+            </div>
+
+            <button type="submit">Enviar</button><!-- Botón para enviar el formulario -->
+        </form>
+        <div id="successMessage" class="hidden"><!-- Contenedor para el mensaje de éxito, inicialmente oculto -->
+            <p>¡Informe ingresado!</p><!-- Mensaje de éxito -->
+        </div>
+    </div>
+
+    <footer><!-- Sección de pie de página -->
+        <div id="container-footer">
+            <section class="s-footer">
+                <h5 id="copyright">Copyright © Secretaría de Juventudes 2024</h5><!-- Información de copyright -->
+            </section>
+        </div>
+    </footer>
+
+    <script src="comunscript.js"></script><!-- Archivo JavaScript común para la página -->
+    <script src="javaascript/buscador.js"></script><!-- Archivo JavaScript específico para la funcionalidad del buscador -->
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html><!--tipo de documento html5-->
+<html lang="es"><!--Idioma de la página-->
+    <head>
+        <meta charset="utf-8"><!--Conjunto de caracteres a utilizar-->
+
+        <meta name="viewport"   content="width=device-width, initial-scale= 1.0"><!--hace a la página responsive-->
+
+        <link rel="stylesheet"  href="css/inicio.css"><!-- Enlace al css de la página-->
+
+        <link rel="icon"    href="imagenes/logo.jpeg"> <!-- Es el icono que tiene en la pestaña de la página.-->
+        
+        <title>Secretaria de Juventudes</title><!--Titulo de la página-->
+    </head>
+    <body> <!-- Es el cuerpo de la página index -->
+        <header> <!-- El encabezado de la página index-->
+            <section id="caja-menu"> <!-- Es la sección del menú, este contiene todo el menú-->
+                <div class="contenedor-menu"> <!--Un div que contiene todo el menú-->
+                    <div class="container_l"> <!--Es el div que contiene el logo en el menú de navegación horizontal-->
+                        <div id="logo"> <!--El div del logo-->
+                            <a href="Index.html"><img src="imagenes/logo.jpeg" alt="" class="img_j"></a><!--Logo de la secretaría de juventudes, es un enlace al index del sitio web-->
+                        </div>
+                    </div>
+                    <nav class="navbar_navbar-expand-lg"><!--El nav que contiene un div, una lista desordenada y crea una caja de li-->
+                        <div class="container-fluid"><!--Un div que contiene la lista desordenada y varios li-->
+                            <ul class="menú"><!--Lista desordenada con varios li-->
+                                <li class="lista"><!--Todos los li tienen la misma clase--><!--lista del enlace a educación-->
+                                    <a href="educacion.html" class="textT">EDUCACIÓN</a><!--Todos los enlaces tienen la misma clase-->  <!--Enlace a la página de educación-->
+                                </li>
+
+                                <li class="lista"><!--lista del enlace a comunicación-->
+                                    <a href="comunicaciones.html" class="textT">COMUNICACIÓN</a><!--enlace a la página de educación-->
+                                </li>
+
+                                <li class="lista"><!--lista del enlace a la página de cultura y deporte-->
+                                    <a href="Cultura_Deporte.html" class="textT">CULTURA Y DEPORTES</a><!--enlace a la página de cultura y deporte-->
+                                </li>
+
+                                <li class="lista"><!--Lista del enlace de salud y ambiente-->
+                                    <a href="Salud_Ambiente.html" class="textT">SALUD Y AMBIENTE</a><!--Enlace a la página de salud y ambiente-->
+                                </li>
+
+                                <li class="lista"><!--lista del enlace a la página de empleo joven-->
+                                    <a href="empleojoven.html" class="textT">EMPLEO JOVEN</a><!--enlace a la página de empleo joven-->
+                                </li>
+
+                                <li class="lista"><!--lista del enlace a la página de casa joven-->
+                                    <a href="casajoven.html" class="textT">CASA JOVEN</a><!--enlace a la página de casa joven-->
+                                </li>
+
+                                <li class="lista"><!--lista del enlace a la página de administración-->
+                                    <a href="administracion.html" class="textT">ADMINISTRACIÓN</a><!--enlace a la página de administración-->
+                                </li>
+                            </ul><!--fin de la lista desordenada-->
+                        </div><!--fin del div contenedor-->
+                    </nav><!--fin del nav-->
+                </div><!--fin del div que contiene a todo el menú-->
+            </section><!--fin de la section que contiene al menú de navegación horizontal-->
+        </header><!--fin del encabezado-->
+        <div id="sectores"><!--Contiene las imágenes de todos los sectores de la secretaría-->
+            <div class="sectores-web"><!--es el div del título de los sectores-->
+                <h2>Sectores</h2><!--un h2 de la página donde están los sectores de la página-->
+            </div>
+            <hr>
+            <div class="container"><!--un div contenedor de las imágenes y enlaces a las páginas-->
+                <section class="images"><!--sección de las imágenes y de los enlaces de los sectores-->
+                    <a href="#" class="img-porta" onclick="openLoginModal('educacion.html')"><img src="imagenes/logo20.png" class="img-port"></a><!--Enlace a la página y muestra el logo del eje-->
+
+                    <a href="#" class="img-porta" onclick="openLoginModal('comunicaciones.html')"><img src="imagenes/logo21.png" class="img-port"></a><!--Enlace a la página y muestra el logo del eje-->
+
+                    <a href="#" class="img-porta" onclick="openLoginModal('Cultura_Deporte.html')"><img src="imagenes/logo22.png" class="img-port"></a><!--Enlace a la página y muestra el logo del eje-->
+
+                    <a href="#" class="img-porta" onclick="openLoginModal('Salud_Ambiente.html')"><img src="imagenes/logo23.png" class="img-port"></a><!--Enlace a la página y muestra el logo del eje-->
+
+                    <a href="#" class="img-porta" onclick="openLoginModal('empleojoven.html')"><img src="imagenes/logo24.png" class="img-port"></a><!--Enlace a la página y muestra el logo del eje-->
+
+                    <a href="#" class="img-porta" onclick="openLoginModal('casajoven.html')"><img src="imagenes/logo25.png" class="img-port"></a><!--Enlace a la página y muestra el logo del eje-->
+                </section>
+            </div>
+            <div class="imagen-grande"><!--un div que contiene la página de administración-->
+                <a href="#" onclick="openLoginModal('administracion.html')"><img src="imagenes/logo27.png" id="img-port3"></a><!--Enlace a la página y muestra el logo del eje-->
+            </div>
+        </div>
+
+        <!--Ventana Multimodal de iniciar sesión-->
+        <section id="loginModal" class="vm" style="display: none;"><!--Sección contenedora de todo iniciar sesión-->
+            <div class="container_up"><!--un div que contiene el formulario de usuario y contraseña-->
+                <h1 id="title_up">Registrese<hr></h1><!--Titulo de iniciar sesion con un divisor hr-->
+                <form id="user_password" onsubmit="return validateForm()"><!--formulario de usuario y contraseña -->
+                    <div class="up"><!--un div que contiene el usuario-->
+                        <label for="name" class="label"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"  fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                          </svg><br>Usuario<br></label><!--label del usuario-->
+                        <input placeholder="Usuario" type="text" id="name" name="name" required class="content"><!--un input para que ingrese el usuario-->
+                    </div>
+                    <div class="up"><!--un div que contiene la contraseña-->
+                        <label for="name" class="label"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/>
+                          </svg><br>Contraseña<br></label><!--label del contraseña-->
+                        <input placeholder="Contraseña" type="password" id="password" name="password" required class="content"><!--input para que ingrese la contraseña-->
+                    </div>
+                    <div class="c_button"><!--un div que contiene el boton-->
+                        <button class="button"> Enviar </button><!--boton para que envie el registro del formulario-->
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <footer><!--pie de página-->
+            <div id="container-footer"><!--contenedor de a sección del copyright-->
+                <section class="s-footer"><!--sección del copyright de la página-->
+                    <h5 id="copyright">Copyright © Secretaría de Juventudes 2024</h5><!--h5 que contiene el texto del copyright de la secretaría de juventudes-->
+                </section>
+            </div>
+        </footer>
+        <script src="javascript/vm_is.js"></script>
+    </body>
+</html>
